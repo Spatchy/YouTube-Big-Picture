@@ -1,0 +1,31 @@
+{
+  "name": "youtube-big-picture",
+  "version": "1.0.0",
+  "description": "Watch and control YouTube in your browser from your sofa",
+  "main": "content.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist deploy",
+    "build": "npm run clean && webpack --config webpack.config.js",
+    "make": "npm run build && mkdir deploy && cd dist && zip -r ../deploy/build_$npm_package_version.zip ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spatchy/YouTube-Big-Picture.git"
+  },
+  "author": "Spatchy",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Spatchy/YouTube-Big-Picture/issues"
+  },
+  "homepage": "https://github.com/Spatchy/YouTube-Big-Picture#readme",
+  "devDependencies": {
+    "@types/chrome": "^0.0.313",
+    "copy-webpack-plugin": "^13.0.0",
+    "glob": "^11.0.1",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.2",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1"
+  }
+}

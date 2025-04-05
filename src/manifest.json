@@ -1,0 +1,23 @@
+{
+  "name": "YouTube Big Picture",
+  "description": "Watch and control YouTube in your browser from your sofa",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "scripts/content.js"
+      ],
+      "css": [
+        "styles/style.css"
+      ],
+      "matches": [
+        "https://youtube.com"
+      ]
+    }
+  ]
+}
