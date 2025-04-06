@@ -2,21 +2,26 @@
   "name": "YouTube Big Picture",
   "description": "Watch and control YouTube in your browser from your sofa",
   "version": "1.0",
-  "manifest_version": 3,
+  "manifest_version": 2,
   "permissions": [
     "activeTab",
     "scripting"
   ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "spatchy@spatchy.net"
+    }
+  },
   "content_scripts": [
     {
       "js": [
-        "scripts/content.js"
+        "scripts/cleanInterface.js"
       ],
       "css": [
         "styles/style.css"
       ],
       "matches": [
-        "https://youtube.com"
+        "https://*.youtube.com/*"
       ]
     }
   ]

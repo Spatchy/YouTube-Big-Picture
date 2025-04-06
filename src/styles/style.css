@@ -1,0 +1,11 @@
+.YTBP_hidden {
+  display: none;
+}
+
+ytd-guide-renderer {
+  display: none !important;
+}
+
+ytd-mini-guide-renderer {
+  display: block !important;
+}
