@@ -10,7 +10,7 @@ export default tseslint.config(
       'dist/**/*',
       'dist/**',
       "eslint.config.js",
-      "webpack.config.js"
+      "webpack.config.cjs"
     ],
   },
   {
@@ -91,9 +91,9 @@ export default tseslint.config(
         "ignoreJSX": "multi-line",
       }],
       "object-curly-newline": ["error", {
-        "ObjectExpression": { "multiline": true, "minProperties": 3 },
-        "ObjectPattern": { "multiline": true, "minProperties": 3 },
-        "ExportDeclaration": { "multiline": true, "minProperties": 3 },
+        "ObjectExpression": { "consistent": true, "minProperties": 3 },
+        "ObjectPattern": { "consistent": true, "minProperties": 3 },
+        "ExportDeclaration": { "consistent": true, "minProperties": 3 },
         "ImportDeclaration": "never"
       }],
       "padding-line-between-statements": [

@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf dist deploy",
-    "build": "npm run clean && webpack --config webpack.config.js",
+    "build": "npm run clean && webpack --config webpack.config.cjs",
     "make": "npm run build && mkdir deploy && cd dist && zip -r ../deploy/build_$npm_package_version.zip ."
   },
   "repository": {
