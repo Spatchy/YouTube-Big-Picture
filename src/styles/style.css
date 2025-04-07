@@ -2,6 +2,11 @@
   display: none;
 }
 
+.YTBP_wordmark {
+  display: block;
+  max-width: 130%;
+}
+
 ytd-guide-renderer {
   display: none !important;
 }

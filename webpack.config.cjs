@@ -12,11 +12,14 @@ tsFiles.forEach(file => {
 module.exports = {
   mode: "production",
 
+  devtool: process.argv.mode === 'development' ? 'inline-source-map' : undefined,
+
   entry: entries,
 
   output: {
     path: path.join(__dirname, "dist"),
-    filename: "[name].js"
+    filename: "[name].js",
+    assetModuleFilename: 'assets/[hash][ext][query]',
   },
 
   resolve: {
@@ -29,6 +32,10 @@ module.exports = {
         test: /\.tsx?$/,
         loader: "ts-loader",
         exclude: /node_modules/
+      },
+      {
+        test: /\.svg/,
+        type: 'asset/inline',
       }
     ]
   },
@@ -41,10 +48,10 @@ module.exports = {
           to: '[path][name][ext]',
           context: 'src/',
           globOptions: {
-            ignore: ['**/*.ts']
+            ignore: ['**/*.ts', '**/*.svg']
           }
         }
       ]
-    })
+    }),
   ]
 };

@@ -2,7 +2,8 @@ const modifyItems = {
   gridOuter: "ytd-rich-grid-renderer.style-scope",
   gridContent: "div.ytd-rich-grid-renderer > #contents",
   expandedGuide: "ytd-guide-renderer",
-  guideBtn: "#guide-button button, ytd-masthead button[aria-label*=\"Guide\"]"
+  guideBtn: "yt-icon-button#guide-button",
+  logoSvg: "yt-icon#logo-icon svg"
 };
 
 const removeItems = {
@@ -12,7 +13,8 @@ const removeItems = {
   notifsBtn: "[aria-label=\"Notifications\"]",
   perVideoMenus: "#details > #menu",
   nonVideoSections: "ytd-rich-section-renderer",
-  nonVideoShelves: "ytd-rich-shelf-renderer"
+  nonVideoShelves: "ytd-rich-shelf-renderer",
+  countryIndicator: "#country-code"
 };
 
 export {

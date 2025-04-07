@@ -1,4 +1,5 @@
 import { modifyItems, removeItems } from "./elementSelectors/home";
+import wordmark from "../assets/Wordmark Logo.svg";
 
 const activeObservers: MutationObserver[] = [];
 
@@ -96,6 +97,13 @@ function initializeElementWatchers() {
         element.classList.add("YTBP_hidden");
       }
     });
+  });
+
+  createElementObserver(modifyItems.logoSvg, (element) => {
+    const replacement = new Image();
+    replacement.src = wordmark;
+    replacement.classList.add("YTBP_wordmark");
+    element.replaceWith(replacement);
   });
 }
 
