@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="126.36766mm"
+   height="126.96595mm"
+   viewBox="0 0 126.36766 126.96595"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient17">
+      <stop
+         style="stop-color:#ff3300;stop-opacity:1;"
+         offset="0.11084338"
+         id="stop18" />
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1;"
+         offset="0.68072289"
+         id="stop19" />
+      <stop
+         style="stop-color:#ff006a;stop-opacity:1;"
+         offset="1"
+         id="stop17" />
+    </linearGradient>
+    <linearGradient
+       id="swatch15">
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1;"
+         offset="0"
+         id="stop15" />
+    </linearGradient>
+    <radialGradient
+       xlink:href="#linearGradient17"
+       id="radialGradient18"
+       cx="98.171303"
+       cy="139.92944"
+       fx="98.171303"
+       fy="139.92944"
+       r="46.330303"
+       gradientTransform="matrix(1,0,0,1.0047343,0,-0.6624645)"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       xlink:href="#linearGradient17"
+       id="radialGradient3"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.0047343,0,-0.6624645)"
+       cx="98.171303"
+       cy="139.92944"
+       fx="98.171303"
+       fy="139.92944"
+       r="46.330303" />
+    <radialGradient
+       xlink:href="#linearGradient17"
+       id="radialGradient4"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.0047343,0,-0.6624645)"
+       cx="98.171303"
+       cy="139.92944"
+       fx="98.171303"
+       fy="139.92944"
+       r="46.330303" />
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-384.81615,-98.59343)">
+    <rect
+       style="fill:#1a1a1a;stroke-width:0.314539"
+       id="rect5"
+       width="480"
+       height="270"
+       x="340.78333"
+       y="27.076395"
+       ry="71.686974" />
+    <g
+       id="g7"
+       transform="translate(344.20505,12.782652)">
+      <g
+         id="g8"
+         style="fill:url(#radialGradient18);fill-opacity:1"
+         transform="matrix(1.3637693,0,0,1.3637693,-30.088036,-41.53775)">
+        <path
+           id="path1"
+           style="fill:url(#radialGradient3);fill-opacity:1;stroke-width:0.210849"
+           d="m 141.06844,144.71472 c -16.6528,9.61449 -33.3056,19.229 -49.958397,28.84349 -4.577553,2.64286 -8.288393,0.5004 -8.288393,-4.7853 v -57.68699 c 0,-5.2857 3.710841,-7.42816 8.288396,-4.78531 16.652804,9.61449 33.305594,19.229 49.958394,28.84349 4.57755,2.64286 4.57755,6.92776 0,9.57062 z" />
+        <path
+           id="path6"
+           style="fill:url(#radialGradient4);fill-opacity:1;stroke-width:0.264583"
+           d="m 129.07787,93.892352 c -6.77491,3.911467 -13.54982,7.822938 -20.32473,11.734408 -2.07262,1.19662 -2.07264,3.13677 -5e-5,4.33344 6.77489,3.91167 13.54982,7.82327 20.32478,11.73482 2.07262,1.19663 3.75281,0.22656 3.75281,-2.16669 V 96.059048 c 0,-2.393254 -1.68019,-3.363317 -3.75281,-2.166696 z M 73.417192,126.02788 53.091934,137.76275 a 2.50189,2.50189 90 0 0 0,4.3334 l 20.325258,11.73487 a 2.5018631,2.5018631 150.00009 0 0 3.752801,-2.16667 v -23.4698 a 2.5018631,2.5018631 29.999911 0 0 -3.752801,-2.16667 z m 55.660678,32.13601 c -6.77496,3.91155 -13.54989,7.82315 -20.32478,11.73482 -2.07259,1.19667 -2.07257,3.13682 5e-5,4.33344 6.77491,3.91147 13.54982,7.82294 20.32473,11.73441 2.07262,1.19662 3.75281,0.22655 3.75281,-2.1667 v -23.46928 c 0,-2.39325 -1.68019,-3.36332 -3.75281,-2.16669 z" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:77.6111px;font-family:'Trade Gothic LT Std';-inkscape-font-specification:'Trade Gothic LT Std Bold Condensed';text-align:start;letter-spacing:-4.36562px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+         x="178.23314"
+         y="177.86516"
+         id="text1"><tspan
+           id="tspan1"
+           style="font-size:77.6111px;letter-spacing:-4.36562px;word-spacing:0px;direction:ltr;fill:#ffffff;stroke-width:0.264583"
+           x="178.23314"
+           y="177.86516">BigPicture</tspan></text>
+    </g>
+  </g>
+</svg>
