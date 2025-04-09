@@ -1,9 +1,9 @@
 const modifyItems = {
-  gridOuter: "ytd-rich-grid-renderer.style-scope",
-  gridContent: "div.ytd-rich-grid-renderer > #contents",
+  gridContent: "div.ytd-rich-grid-renderer#contents",
   expandedGuide: "ytd-guide-renderer",
   guideBtn: "yt-icon-button#guide-button",
-  logoSvg: "yt-icon#logo-icon svg"
+  logoSvg: "yt-icon#logo-icon svg",
+  videoItemGeneric: "ytd-rich-item-renderer"
 };
 
 const removeItems = {

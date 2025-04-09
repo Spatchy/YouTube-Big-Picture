@@ -7,6 +7,12 @@
   max-width: 130%;
 }
 
+.YTBP_selected {
+  background: white;
+  padding: 2px;
+  border-radius: 1.3rem;
+}
+
 ytd-guide-renderer {
   display: none !important;
 }

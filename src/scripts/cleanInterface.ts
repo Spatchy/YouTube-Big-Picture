@@ -1,45 +1,11 @@
 import { modifyItems, removeItems } from "./elementSelectors/home";
 import wordmark from "../assets/Wordmark Logo.svg";
+import { createElementObserver, cleanupObservers } from "./utils/elementObserver";
 
-const activeObservers: MutationObserver[] = [];
-
-function createElementObserver(selector: string, callback: (element: Element) => void, timeoutInMs = 10000) {
-  const elements = document.querySelectorAll(selector);
-  [ ...elements ].forEach((element) => {
-    callback(element);
-  });
-
-  const observer = new MutationObserver(() => {
-    const elements = document.querySelectorAll(selector);
-    [ ...elements ].forEach((element) => {
-      callback(element);
-    });
-  });
-
-  observer.observe(document.body, {
-    childList: true,
-    subtree: true
-  });
-
-  activeObservers.push(observer);
-
-  // Safety timeout to prevent potential memory leaks
-  setTimeout(() => {
-    const index = activeObservers.indexOf(observer);
-    if (index > -1) {
-      observer.disconnect();
-      activeObservers.splice(index, 1);
-    }
-  }, timeoutInMs);
-
-  return observer;
-}
-
-// Function to monitor URL changes
+// Monitor navigation changes
 function monitorPageChanges() {
   let lastUrl = location.href;
 
-  // Create an observer that watches for URL changes
   const urlObserver = new MutationObserver(() => {
     if (location.href !== lastUrl) {
       lastUrl = location.href;
@@ -51,13 +17,11 @@ function monitorPageChanges() {
     }
   });
 
-  // Observe document for changes that might indicate navigation
   urlObserver.observe(document, {
     childList: true,
     subtree: true
   });
 
-  // Also listen for YouTube's navigation events (which might not change the URL)
   document.addEventListener("yt-navigate-finish", () => {
     console.log("YouTube navigation event detected");
 
@@ -65,13 +29,6 @@ function monitorPageChanges() {
     initializeElementWatchers();
     forceSidebarCollapse();
   });
-}
-
-function cleanupObservers() {
-  activeObservers.forEach((observer) => {
-    observer.disconnect();
-  });
-  activeObservers.length = 0;
 }
 
 function forceSidebarCollapse() {
@@ -89,7 +46,6 @@ function forceSidebarCollapse() {
   });
 }
 
-// Initialize watchers for all selectors we want to modify
 function initializeElementWatchers() {
   Object.values(removeItems).forEach((sel) => {
     createElementObserver(sel, (element) => {

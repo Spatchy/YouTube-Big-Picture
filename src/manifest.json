@@ -15,7 +15,8 @@
   "content_scripts": [
     {
       "js": [
-        "scripts/cleanInterface.js"
+        "scripts/cleanInterface.js",
+        "scripts/cursor.js"
       ],
       "css": [
         "styles/style.css"
