@@ -9,8 +9,15 @@
 
 .YTBP_selected {
   background: white;
-  padding: 2px;
   border-radius: 1.3rem;
+}
+
+.YTBP_selected #video-title {
+  color: black;
+}
+
+ytd-rich-item-renderer.ytd-rich-grid-renderer {
+  padding: 2px;
 }
 
 ytd-guide-renderer {
