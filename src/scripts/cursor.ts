@@ -92,10 +92,7 @@ createElementObserver(modifyItems.gridContent, (grid) => {
     selectedItemIndex = firstItemIndex;
     selectedItem = firstItem;
 
-    document.addEventListener("keydown", (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-
+    const getCallback = (key: string) => {
       const callback = {
         ArrowRight: arrowRightHandler,
         ArrowLeft: () => {
@@ -108,11 +105,30 @@ createElementObserver(modifyItems.gridContent, (grid) => {
           arrowDownHandler(itemsPerRow);
         },
         Enter: enterHandler
-      }[ event.key ];
+      }[ key ];
+
+      return callback;
+    };
+
+    window.addEventListener("keydown", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+
+      const callback = getCallback(event.key);
 
       selectedItem.classList.remove("YTBP_selected");
       callback?.();
       selectedItem.classList.add("YTBP_selected");
+    });
+
+    window.addEventListener("YTBP_direction-input", (event: CustomEventInit<string>) => {
+      if (event.detail) {
+        const callback = getCallback(event.detail);
+
+        selectedItem.classList.remove("YTBP_selected");
+        callback?.();
+        selectedItem.classList.add("YTBP_selected");
+      }
     });
   }
 });

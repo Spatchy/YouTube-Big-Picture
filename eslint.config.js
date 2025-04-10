@@ -101,6 +101,12 @@ export default tseslint.config(
         { "blankLine": "always", "prev": "*", "next": ["return", "export"] },
         { "blankLine": "always", "prev": "import", "next": "*" },
         { "blankLine": "never", "prev": "import", "next": "import" },
+      ],
+      "@typescript-eslint/restrict-template-expressions": [
+        "error", {
+          "allowNumber": true,
+          "allowNullish": true
+        }
       ]
     }
   }

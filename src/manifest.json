@@ -16,7 +16,8 @@
     {
       "js": [
         "scripts/cleanInterface.js",
-        "scripts/cursor.js"
+        "scripts/cursor.js",
+        "scripts/gamepad.js"
       ],
       "css": [
         "styles/style.css"
