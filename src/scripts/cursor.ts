@@ -66,6 +66,12 @@ createElementObserver(modifyItems.gridContent, (grid) => {
     selectedItem = grid.children.item(selectedItemIndex) ?? selectedItem;
   };
 
+  const enterHandler = () => {
+    const clickableElement = selectedItem.querySelector("#details");
+    console.log(`detected enter on element ${clickableElement?.tagName ?? ""}`);
+    (clickableElement as HTMLElement).dispatchEvent(new Event("click"));
+  };
+
   const firstItem = grid.querySelector(modifyItems.videoItemGeneric);
   if (firstItem) {
     console.log("found grid items");
@@ -100,7 +106,8 @@ createElementObserver(modifyItems.gridContent, (grid) => {
         },
         ArrowDown: () => {
           arrowDownHandler(itemsPerRow);
-        }
+        },
+        Enter: enterHandler
       }[ event.key ];
 
       selectedItem.classList.remove("YTBP_selected");
