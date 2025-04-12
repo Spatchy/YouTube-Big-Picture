@@ -17,7 +17,8 @@
       "js": [
         "scripts/cleanInterface.js",
         "scripts/cursor.js",
-        "scripts/gamepad.js"
+        "scripts/gamepad.js",
+        "scripts/loadVideo.js"
       ],
       "css": [
         "styles/style.css"

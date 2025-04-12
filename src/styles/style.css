@@ -27,3 +27,50 @@ ytd-guide-renderer {
 ytd-mini-guide-renderer {
   display: block !important;
 }
+
+.YTBP_fullscreen_banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #181818;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.YTBP_fade_out {
+  opacity: 0;
+}
+
+.YTBP_loading_text {
+  color: #ffffff;
+  font-size: 20px;
+  margin-top: 20px;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.YTBP_spinner {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255, 0, 0, 0.3);
+  border-radius: 50%;
+  border-top-color: #ff0000;
+  animation: ytbp-spin 1s ease-in-out infinite;
+}
+
+@keyframes ytbp-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Ensure YouTube elements stay under our banner */
+ytd-app {
+  z-index: 1 !important;
+}
