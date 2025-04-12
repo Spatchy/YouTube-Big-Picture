@@ -81,7 +81,7 @@ export default tseslint.config(
       "array-element-newline": ["error", { "multiline": true, "minItems": 3 }],
       "quote-props": ["error", "consistent-as-needed"],
       "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 1, "maxBOF": 0 }],
-      "lines-around-comment": ["error", { "beforeBlockComment": true, "beforeLineComment": true }],
+      "lines-around-comment": ["error", { "beforeBlockComment": true, "beforeLineComment": false }],
       "space-before-function-paren": ["error", {"anonymous": "always", "named": "never", "asyncArrow": "always"}],
       "no-extra-parens": ["error", "all", {
         "nestedBinaryExpressions": false,
