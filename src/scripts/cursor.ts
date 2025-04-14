@@ -1,6 +1,14 @@
 import { createElementObserver } from "./utils/elementObserver";
 import { modifyItems } from "./elementSelectors/home";
 
+enum CursorInput {
+  left = "ArrowLeft",
+  right = "ArrowRight",
+  up = "ArrowUp",
+  down = "ArrowDown",
+  select = "Enter"
+}
+
 createElementObserver(modifyItems.gridContent, (grid) => {
   console.log("creating element observer for grid content");
 
@@ -62,7 +70,7 @@ createElementObserver(modifyItems.gridContent, (grid) => {
       }
       currentMovingItemIndex++;
     }
-    selectedItemIndex = targetSelectedItemIndex;
+    selectedItemIndex = Math.min(targetSelectedItemIndex, grid.children.length - 1);
     selectedItem = grid.children.item(selectedItemIndex) ?? selectedItem;
   };
 
@@ -92,7 +100,7 @@ createElementObserver(modifyItems.gridContent, (grid) => {
     selectedItemIndex = firstItemIndex;
     selectedItem = firstItem;
 
-    const getCallback = (key: string) => {
+    const getCallback = (key: CursorInput) => {
       const callback = {
         ArrowRight: arrowRightHandler,
         ArrowLeft: () => {
@@ -110,24 +118,33 @@ createElementObserver(modifyItems.gridContent, (grid) => {
       return callback;
     };
 
-    window.addEventListener("keydown", (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-
-      const callback = getCallback(event.key);
+    const moveCursor = (input: CursorInput) => {
+      const callback = getCallback(input);
 
       selectedItem.classList.remove("YTBP_selected");
-      callback?.();
+
+      callback();
+
+      selectedItem.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+
       selectedItem.classList.add("YTBP_selected");
+    };
+
+    window.addEventListener("keydown", (event) => {
+      if (Object.values(CursorInput).includes(event.key as CursorInput)) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        moveCursor(event.key as CursorInput);
+      }
     });
 
     window.addEventListener("YTBP_direction-input", (event: CustomEventInit<string>) => {
       if (event.detail) {
-        const callback = getCallback(event.detail);
-
-        selectedItem.classList.remove("YTBP_selected");
-        callback?.();
-        selectedItem.classList.add("YTBP_selected");
+        moveCursor(event.detail as CursorInput);
       }
     });
   }

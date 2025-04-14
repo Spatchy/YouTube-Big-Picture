@@ -74,3 +74,7 @@ ytd-mini-guide-renderer {
 ytd-app {
   z-index: 1 !important;
 }
+
+ytd-rich-shelf-renderer {
+  display: none;
+}
