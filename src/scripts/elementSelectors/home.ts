@@ -1,6 +1,7 @@
 const modifyItems = {
   gridContent: "div.ytd-rich-grid-renderer#contents",
   expandedGuide: "ytd-guide-renderer",
+  miniGuide: "ytd-mini-guide-renderer",
   guideBtn: "yt-icon-button#guide-button",
   logoSvg: "yt-icon#logo-icon svg",
   videoItemGeneric: "ytd-rich-item-renderer"

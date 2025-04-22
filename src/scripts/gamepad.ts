@@ -58,7 +58,6 @@ const startGamepadLoop = (gp: Gamepad) => {
           holdTimeouts.set(
             i + 112,
             setTimeout(() => {
-              console.log(`holding button ${i + 112}`);
               holdTimeouts.delete(i + 112);
             }, 400)
           );
@@ -66,20 +65,8 @@ const startGamepadLoop = (gp: Gamepad) => {
       } else if (holdTimeouts.has(i + 112)) {
         clearTimeout(holdTimeouts.get(i + 112));
         holdTimeouts.delete(i + 112);
-        console.log(`button released ${i + 112}`);
       }
     });
-
-    if (y < -0.5) {
-      console.log("up");
-    } else if (y > 0.5) {
-      console.log("down");
-    }
-    if (x < -0.5) {
-      console.log("left");
-    } else if (x > 0.5) {
-      console.log("right");
-    }
   }, 1);
 };
 

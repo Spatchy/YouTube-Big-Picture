@@ -16,8 +16,15 @@
   color: black;
 }
 
+#contents.ytd-rich-grid-renderer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 ytd-rich-item-renderer.ytd-rich-grid-renderer {
+  width: auto;
   padding: 2px;
+  margin: 0.5rem !important;
 }
 
 ytd-guide-renderer {
@@ -75,6 +82,7 @@ ytd-app {
   z-index: 1 !important;
 }
 
-ytd-rich-shelf-renderer {
+ytd-rich-shelf-renderer,
+ytd-rich-section-renderer {
   display: none;
 }
