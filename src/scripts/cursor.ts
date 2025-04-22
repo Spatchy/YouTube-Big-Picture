@@ -27,7 +27,14 @@ function go() {
     };
 
     const arrowLeftHandler = () => {
-      selectedItem = selectedItem.previousElementSibling ?? selectedItem;
+      const target = selectedItem.previousElementSibling;
+      if (!target) {
+        if (firstItem) {
+          selectedItem = firstItem;
+        }
+      } else {
+        selectedItem = target;
+      }
       if (!selectedItem.matches(modifyItems.videoItemGeneric)) {
         arrowLeftHandler();
       }
